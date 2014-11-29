@@ -1,14 +1,18 @@
 From http://claysnow.co.uk/recycling-tests-in-tdd/
 
-Given a letter, print a diamond starting with ‘A’ with the supplied letter at the widest point.
+Given a letter, make a diamond starting with ‘A’ with the supplied letter at the widest point.
 
-For example: print-diamond ‘C’ prints
+For example: from ‘C’ create
 
-  A
- B B
-C   C
- B B
-  A
+__A__
+
+_B_B_
+ 
+C___C
+ 
+_B_B_
+
+__A__
 
 
 
