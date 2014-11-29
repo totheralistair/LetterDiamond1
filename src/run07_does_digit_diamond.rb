@@ -14,8 +14,7 @@
   def fill_the_r_rows_in_the_diamond d, x, r
     # assumes r is in the top half of the diamond
     row_contents = row_in_diamond  x, r
-    d[ r ] = row_contents
-    d[ 2*x-r ] = row_contents
+    d[ r ] = d[ 2*x-r ] = row_contents
     return d
   end
 

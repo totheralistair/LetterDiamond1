@@ -38,7 +38,6 @@ class TestDiamond < Test::Unit::TestCase
 def test_04_glues_bumpers_to_tray_making_complete_row_in_diamond
     p __method__
 
-    # start with a bumper and a tray, see they come out as a single thing
     row_in_diamond(0,0).should == [0]
     row_in_diamond(1,0).should == [nil, 0, nil]
     row_in_diamond(1,1).should == [1, nil, 1]
