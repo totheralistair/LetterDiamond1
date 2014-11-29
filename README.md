@@ -4,15 +4,15 @@ Given a letter, make a diamond starting with ‘A’ with the supplied letter at
 
 For example: from ‘C’ create
 
-__A__
+ _ _ A _ _
 
-_B_B_
+_ B _ B _ 
  
-C___C
+ C _ _ _ C
  
-_B_B_
+ _ B _ B _
 
-__A__
+ _ _ A _ _
 
 
 
