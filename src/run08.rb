@@ -23,15 +23,13 @@
   def digit_diamond  x
     d = diamond_holder  x
     for r in 0..x
-      fill_the_r_rows_in_the_diamond  d, x, r
+      fill_those_rows_in_the_diamond  d, x, r
     end
     return d
   end
 
-  def fill_the_r_rows_in_the_diamond d, x, r
-    # assumes r is in the top half of the diamond
-    row_contents = row_in_diamond  x, r
-    d[ r ] = d[ 2*x-r ] = row_contents
+  def fill_those_rows_in_the_diamond d, x, r
+    d[ r ] = d[ 2*x-r ] = row_in_diamond  x, r
     return d
   end
 
@@ -43,7 +41,7 @@
   def row_in_diamond x, r
     bumper = bumper  x, r
     tray = tray_for_row r
-    answer = bumper + tray + bumper
+    row_contents = bumper + tray + bumper
   end
 
   def bumper x, r

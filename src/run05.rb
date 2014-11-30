@@ -11,7 +11,7 @@
   def make_row_in_diamond x, r
     bumper = make_bumper  x, r
     tray = make_and_fill_tray r
-    answer = bumper + tray + bumper
+    row_contents = bumper + tray + bumper
   end
 
   def make_bumper x, r

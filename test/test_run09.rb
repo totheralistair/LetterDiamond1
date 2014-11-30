@@ -10,8 +10,7 @@ class TestDiamond < Test::Unit::TestCase
     fill_tray( [nil], 0).should == [0]
     fill_tray( [nil, nil], 1).should == [1,1]
     fill_tray( Array.new(3), 2).should == [2, nil, 2]
-    r = 3
-    fill_tray( Array.new(r+1),r).should == [3, nil, nil, 3]
+    r = 3; fill_tray( Array.new(r+1),r).should == [3, nil, nil, 3]
   end
 
   def test_02_makes_and_fills_tray_of_any_size
@@ -37,7 +36,6 @@ class TestDiamond < Test::Unit::TestCase
   def test_04_glues_bumpers_to_tray_making_complete_row_in_diamond
     p __method__
 
-    # start with a bumper and a tray, see they come out as a single thing
     row_in_diamond(0,0).should == [0]
     row_in_diamond(1,0).should == [nil, 0, nil]
     row_in_diamond(1,1).should == [1, nil, 1]
@@ -57,25 +55,25 @@ class TestDiamond < Test::Unit::TestCase
   def test_06_puts_a_row_in_both_upper_and_lower_half_of_diamond
     p __method__
 
-    fill_the_r_rows_in_the_diamond( diamond_holder(0), 0, 0).should ==
+    fill_those_rows_in_the_diamond( diamond_holder(0), 0, 0).should ==
         [
             [0]
         ]
 
-    fill_the_r_rows_in_the_diamond( diamond_holder(1), 1, 0).should ==
+    fill_those_rows_in_the_diamond( diamond_holder(1), 1, 0).should ==
         [
             [nil, 0, nil],
             nil,
             [nil, 0, nil]
         ]
-    fill_the_r_rows_in_the_diamond( diamond_holder(1), 1, 1).should ==
+    fill_those_rows_in_the_diamond( diamond_holder(1), 1, 1).should ==
         [
             nil,
             [1, nil, 1],
             nil
         ]
 
-    fill_the_r_rows_in_the_diamond( diamond_holder(2), 2, 0).should ==
+    fill_those_rows_in_the_diamond( diamond_holder(2), 2, 0).should ==
         [
             [nil, nil, 0, nil, nil],
             nil,
@@ -83,7 +81,7 @@ class TestDiamond < Test::Unit::TestCase
             nil,
             [nil, nil, 0, nil, nil],
         ]
-    fill_the_r_rows_in_the_diamond( diamond_holder(2), 2, 1).should ==
+    fill_those_rows_in_the_diamond( diamond_holder(2), 2, 1).should ==
         [
             nil,
             [nil, 1, nil, 1, nil],
@@ -91,7 +89,7 @@ class TestDiamond < Test::Unit::TestCase
             [nil, 1, nil, 1, nil],
             nil
         ]
-    fill_the_r_rows_in_the_diamond( diamond_holder(2), 2, 2).should ==
+    fill_those_rows_in_the_diamond( diamond_holder(2), 2, 2).should ==
         [
             nil,
             nil,
@@ -137,7 +135,7 @@ class TestDiamond < Test::Unit::TestCase
   def test_09_can_get_spacer_as_needed
     p __method__
 
-    spacer_from_nil.should == '_'
+    spacer.should == '_'
   end
 
   end

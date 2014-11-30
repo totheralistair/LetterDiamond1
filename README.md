@@ -6,7 +6,7 @@ For example: from ‘C’ create
 
  _ _ A _ _
 
-_ B _ B _ 
+ _ B _ B _ 
  
  C _ _ _ C
  
