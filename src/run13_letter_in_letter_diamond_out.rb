@@ -43,7 +43,7 @@ end
 
 def letter_from_digit value
   out_chars = ('A'..'Z').to_a
-  out_char = out_chars[ value ]
+  return out_chars[ value ]
 end
 
 
@@ -68,7 +68,7 @@ end
 def row_in_diamond x, r
   bumper = bumper  x, r
   tray = tray_for_row r
-  row_contents = bumper + tray + bumper
+  return bumper + tray + bumper
 end
 
 def bumper x, r
